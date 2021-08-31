@@ -23,8 +23,7 @@ function App() {
                   <HomePage /> <MovieCard {...matchProps} />;
                 </>
               );
-            }}
-          />
+            }} />
         </Container>
         <Route
           exact
@@ -56,7 +55,7 @@ function App() {
           path='/searchedmovies'
           render={(matchProps) => {
             return <FetchAndSearchMovies {...matchProps} />;
-          }}></Route>
+          }} />
       </BrowserRouter>
     </>
   );
