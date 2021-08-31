@@ -1,0 +1,65 @@
+.card-Class{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap
+}
+.filteredImage {
+    max-height: 40rem;
+    max-width: 40rem;
+    height: auto;
+    width: auto;
+}
+.filteredImageContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+body {
+    background: black;
+}
+.reviewText {
+     color: white;
+}
+.home {
+    text-decoration: none;
+}
+.homePage {
+    color: white;
+}
+.whoWeAre {
+    display: flex;
+    justify-content: center;
+}
+.bioText {
+text-align: center;
+padding-left: 1rem;
+padding-right: 1rem;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.icons {
+    display: flex;
+    margin: 1rem;
+}
+
+.card-ClassTwo {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.searchCard {
+    text-align: center;
+    max-height: 25rem;
+    min-height: 25rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+.formButton {
+    display: flex;
+    justify-content: center;
+}
