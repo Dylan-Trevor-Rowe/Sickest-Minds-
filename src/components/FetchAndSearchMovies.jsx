@@ -8,6 +8,7 @@ export const FetchAndSearchMovies = () => {
 
   const fetchMoviesJSON = async (title) => {
     const movieApikey = process.env.REACT_APP_MOVIE_API_KEY;
+    console.log(movieApikey)
     try {
       const response = await fetch(
         `https://api.themoviedb.org/3/search/movie?api_key=${movieApikey}&query=${title} +`
