@@ -1,5 +1,5 @@
 import React from "react";
-import { apiKey } from "./secret/apiKey";
+import { apiKey } from "./.apiKey";
 import { useEffect, useState } from "react";
 import { Container, Image, Col } from "react-bootstrap";
 
