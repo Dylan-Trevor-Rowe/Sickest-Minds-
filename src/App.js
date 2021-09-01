@@ -7,6 +7,7 @@ import { NavBar } from "./components/Nav";
 import { Container } from "react-bootstrap";
 import { HomePage } from "./components/homepage";
 import { FetchAndSearchMovies } from './components/FetchAndSearchMovies.jsx'
+import { SearchedMovieInfo } from './components/movieInfo'
 
 function App() {
   return (
@@ -56,6 +57,13 @@ function App() {
           render={(matchProps) => {
             return <FetchAndSearchMovies {...matchProps} />;
           }} />
+        <Route
+          exact
+          path='/searchedmovies/:movieId(\d+)/movieInfo'
+          render={(matchProps) => {
+            return <SearchedMovieInfo {...matchProps} />;
+          }}
+        />
       </BrowserRouter>
     </>
   );

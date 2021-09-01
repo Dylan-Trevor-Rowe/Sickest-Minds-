@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Button, Container } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 import { MovieArray } from "../data/data";
 import { useHistory } from "react-router-dom";
 import "./homepage.css";

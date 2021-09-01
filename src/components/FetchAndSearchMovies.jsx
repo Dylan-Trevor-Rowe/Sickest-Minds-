@@ -13,13 +13,14 @@ export const FetchAndSearchMovies = () => {
         `https://api.themoviedb.org/3/search/movie?api_key=${apikey}&query=${title} +`
       );
       const movies = await response.json();
+      console.log(movies.results)
       if (movies.results.length === 0) {
         window.alert('No movie matching description')
       } else {
         setMovie(movies.results)
       }
     } catch (error) {
-      console.warn(error)
+      console.error(error)
     }
   };
 
@@ -30,7 +31,6 @@ export const FetchAndSearchMovies = () => {
     textInput.current.value = ''
   }
   return <>
-
     <Form.Control ref={textInput} className="mt-4"
       size="sm" type="text" placeholder="Small text" />
     <div className="formButton">

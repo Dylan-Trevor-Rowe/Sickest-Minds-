@@ -11,11 +11,14 @@ export const NavBar = () => {
         <Nav.Link href='/'>
           <Image src={sickestMinds}></Image>
         </Nav.Link>
+        <Nav.Link className="" href='/searchedmovies'>
+        search for movies
+        </Nav.Link>
       </Container>
       <Container className=' d-flex justify-content-end'>
         <SocialIcon
-          className='icons'
-          url='https://www.facebook.com'
+        className='icons'
+        url='https://www.facebook.com'
         />
         <SocialIcon url='https://mail.google.com' />
       </Container>
