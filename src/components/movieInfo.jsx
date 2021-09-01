@@ -1,4 +1,5 @@
 import React from "react";
+import { apiKey } from "./.secret/apiKey";
 import { useEffect, useState } from "react";
 import { Container, Image, Col } from "react-bootstrap";
 
@@ -11,9 +12,9 @@ export const SearchedMovieInfo = (props) => {
     useEffect(() => {
         (async () => {
             const movieId = parseInt(props.match.params.movieId);
-            const apikey = "a65943813a1e12c1a819c1b5b846740a";
+            const movieApikey = apiKey;
             try {
-                const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apikey}`);
+                const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${movieApikey}`);
                 const movie = await response.json();
                 console.log(movie)
                 setMovie(movie)

@@ -1,3 +1,4 @@
+import { apiKey } from "./.secret/apiKey";
 import React, { useRef, useState } from "react";
 import { Form, Button } from 'react-bootstrap'
 import { SearchCards } from "./searchCard";
@@ -7,18 +8,16 @@ export const FetchAndSearchMovies = () => {
   const [movie, setMovie] = useState([])
 
   const fetchMoviesJSON = async (title) => {
-    const apikey = "a65943813a1e12c1a819c1b5b846740a";
+    const movieApikey = apiKey;
     try {
       const response = await fetch(
-        `https://api.themoviedb.org/3/search/movie?api_key=${apikey}&query=${title} +`
+        `https://api.themoviedb.org/3/search/movie?api_key=${movieApikey}&query=${title} +`
       );
       const movies = await response.json();
-      console.log(movies.results)
-      if (movies.results.length === 0) {
-        window.alert('No movie matching description')
-      } else {
-        setMovie(movies.results)
-      }
+      
+      movies.results.length === 0 ? window.alert('No movie matching description') 
+      : setMovie(movies.results)
+
     } catch (error) {
       console.error(error)
     }
