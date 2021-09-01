@@ -1,5 +1,4 @@
 import React from "react";
-import { apiKey } from "./.apiKey";
 import { useEffect, useState } from "react";
 import { Container, Image, Col } from "react-bootstrap";
 
@@ -12,7 +11,7 @@ export const SearchedMovieInfo = (props) => {
     useEffect(() => {
         (async () => {
             const movieId = parseInt(props.match.params.movieId);
-            const movieApikey = apiKey;
+            const movieApikey = process.env.REACT_APP_MOVIE_API_KEY;
             try {
                 const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${movieApikey}`);
                 const movie = await response.json();
