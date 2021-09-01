@@ -1,4 +1,4 @@
-import { apiKey } from "./.secret/apiKey";
+import { apiKey } from "./secret/apiKey";
 import React, { useRef, useState } from "react";
 import { Form, Button } from 'react-bootstrap'
 import { SearchCards } from "./searchCard";
