@@ -1,5 +1,5 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import React from "react"; 
+import { useEffect, useState, useContext } from "react";
 import { Container, Image, Col } from "react-bootstrap";
 
 export const SearchedMovieInfo = (props) => {
@@ -20,6 +20,7 @@ export const SearchedMovieInfo = (props) => {
             }
         })()
     }, [])
+
 
     const path = movie.poster_path
 

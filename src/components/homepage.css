@@ -82,3 +82,7 @@ body {
   text-decoration: solid;
   color: white;
 }
+
+.favoriteButton {
+  margin-left: 10px;
+}

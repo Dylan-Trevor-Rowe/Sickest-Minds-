@@ -4,6 +4,7 @@ export const DataContext = createContext()
 export const DataProvider = (props) => {
 
     const [movie, setMovie] = useState([])
+    const [movieId, setMovieIdList] = useState([])
 
     const fetchMoviesJSON = async (title) => {
         const movieApikey = process.env.REACT_APP_MOVIE_API_KEY;
@@ -16,9 +17,36 @@ export const DataProvider = (props) => {
         }
     };
 
+     const movieIdPost = async (id) => {
+        try {
+            const jsonNote = JSON.stringify(id)
+            return fetch('http://localhost:8080/id', {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: jsonNote
+            })
+
+        } catch (error) {
+            window.alert('error')
+        }
+    }
+
+    const getMovieIdList = async () => {
+        try {
+            const response = await fetch(`http://localhost:8080/id`);
+            const movieId = await response.json()
+            console.log(movieId)
+            return setMovieIdList(movieId)
+        } catch (error) {
+            console.error(error)
+        }
+    }
+    
     return (
         <DataContext.Provider value={{
-            movie, fetchMoviesJSON
+            movie, fetchMoviesJSON, movieIdPost, getMovieIdList, movieId
         }} >
             {props.children}
         </DataContext.Provider>
