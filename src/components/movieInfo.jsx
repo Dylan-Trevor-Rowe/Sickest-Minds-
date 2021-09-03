@@ -6,8 +6,6 @@ export const SearchedMovieInfo = (props) => {
 
     const [movie, setMovie] = useState({})
 
-    const path = movie.poster_path
-
     useEffect(() => {
         (async () => {
             const movieId = parseInt(props.match.params.movieId);
@@ -20,8 +18,10 @@ export const SearchedMovieInfo = (props) => {
             } catch (error) {
                 console.error(error)
             }
-        }) ()
+        })()
     }, [])
+
+    const path = movie.poster_path
 
     return (
         <Container className="text-center">

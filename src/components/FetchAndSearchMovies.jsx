@@ -1,28 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useContext } from "react";
 import { Form, Button } from 'react-bootstrap'
 import { SearchCards } from "./searchCard";
+import { DataContext } from "./DataProvider";
 
 export const FetchAndSearchMovies = () => {
 
-  const [movie, setMovie] = useState([])
-
-  const fetchMoviesJSON = async (title) => {
-    
-    const movieApikey = process.env.REACT_APP_MOVIE_API_KEY;
-
-    try {
-      const response = await fetch(
-        `https://api.themoviedb.org/3/search/movie?api_key=${movieApikey}&query=${title} +`
-      );
-      const movies = await response.json();
-      
-      movies.results.length === 0 ? window.alert('No movie matching description') 
-      : setMovie(movies.results)
-
-    } catch (error) {
-      console.error(error)
-    }
-  };
+  const { movie, fetchMoviesJSON} = useContext(DataContext)
 
   const textInput = useRef()
 
@@ -30,6 +13,7 @@ export const FetchAndSearchMovies = () => {
     fetchMoviesJSON(textInput.current.value)
     textInput.current.value = ''
   }
+
   return <>
     <Form.Control ref={textInput} className="mt-4"
       size="sm" type="text" placeholder="Small text" />

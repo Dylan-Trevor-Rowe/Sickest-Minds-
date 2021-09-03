@@ -4,7 +4,7 @@ import { MovieArray } from "../data/data";
 import { useHistory } from "react-router-dom";
 import "./homepage.css";
 
-export const MovieCard = (props) => {
+export const MovieCard = () => {
   const history = useHistory();
   return <> {MovieArray.map((i) => {
       const handleClick = () => history.push(`/movieCards/${i.id}/movie`)

@@ -72,3 +72,13 @@ body {
   display: flex;
   justify-content: center;
 }
+
+.searchLink {
+  color: black;
+}
+
+.noMovie {
+  padding-top: 1rem;
+  text-decoration: solid;
+  color: white;
+}

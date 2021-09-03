@@ -8,11 +8,18 @@ export const NavBar = () => {
   return (
     <Navbar bg='white' variant='light' expand="lg">
       <Container className='navContainer'>
-        <Nav.Link href='/'>
-          <Image src={sickestMinds}></Image>
+      <Image src={sickestMinds}></Image>
+        <Nav.Link className="searchLink"  href='/'>
+        <h4>home</h4>
         </Nav.Link>
-        <Nav.Link className="" href='/searchedmovies'>
-        search for movies
+        <Nav.Link className="searchLink" href='/searchedmovies'>
+        <h4>search movies </h4>
+        </Nav.Link>
+        <Nav.Link className="searchLink" href='/'>
+        <h4>favorites</h4>
+        </Nav.Link>
+        <Nav.Link className="searchLink" href='/'>
+        <h4>reviews</h4>
         </Nav.Link>
       </Container>
       <Container className=' d-flex justify-content-end'>

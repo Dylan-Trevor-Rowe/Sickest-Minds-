@@ -1,10 +1,11 @@
 import React from 'react'
 import { Card, Button } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
+import { DataContext } from './DataProvider';
 import './homepage.css'
 
 export const SearchCards = (props) => {
-  
+
   const history = useHistory()
 
   const sliced = props.movie.slice(0, 3)
