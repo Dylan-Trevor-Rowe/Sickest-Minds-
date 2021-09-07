@@ -1,14 +1,52 @@
 {
   "favoriteMovies": [
     {
-      "title": "We Can Be Heroes",
-      "posterPath": "/1S21HpcKY6uQ9UAw68aICmrJaq6.jpg",
-      "id": 1
+      "movieId": 694,
+      "title": "The Shining",
+      "posterPath": "/b6ko0IKC8MdYBBPkkA1aBPLe2yz.jpg",
+      "id": 3
     },
     {
-      "title": "Disney's Christmas Favorites",
-      "posterPath": "/eBGIWcnNLIWSgbi9pwSkpafm7cu.jpg",
-      "id": 2
+      "movieId": 335984,
+      "title": "Blade Runner 2049",
+      "posterPath": "/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg",
+      "id": 4
+    },
+    {
+      "movieId": 68,
+      "title": "Brazil",
+      "posterPath": "/d0PibPzCK4fVikjoD1PqHovbvkt.jpg",
+      "id": 6
+    },
+    {
+      "movieId": 310131,
+      "title": "The Witch",
+      "posterPath": "/xMuUdeFX5RVlwQ1WTON1cqSSmIR.jpg",
+      "id": 7
+    },
+    {
+      "movieId": 493922,
+      "title": "Hereditary",
+      "posterPath": "/lHV8HHlhwNup2VbpiACtlKzaGIQ.jpg",
+      "id": 8
+    },
+    {
+      "movieId": 28,
+      "title": "Apocalypse Now",
+      "posterPath": "/gQB8Y5RCMkv2zwzFHbUJX3kAhvA.jpg",
+      "id": 9
+    },
+    {
+      "movieId": 59,
+      "title": "A History of Violence",
+      "posterPath": "/rrc6GiAKHDrUjp8OmdVng9hRWBn.jpg",
+      "id": 10
+    },
+    {
+      "movieId": 87,
+      "title": "Indiana Jones and the Temple of Doom",
+      "posterPath": "/5VPmZF77ZjTMqIUQlXZWmdMsGIN.jpg",
+      "id": 11
     }
   ]
 }

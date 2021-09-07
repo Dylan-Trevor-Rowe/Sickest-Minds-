@@ -4,7 +4,6 @@ export const DataContext = createContext()
 export const DataProvider = (props) => {
 
     const movieApikey = process.env.REACT_APP_MOVIE_API_KEY;
-
     const [movie, setMovie] = useState([])
     const [dbFavMovies, setDbFavMovie] = useState([])
     const [favoriteMovie, setFavoritedMovie] = useState({})
@@ -56,9 +55,16 @@ export const DataProvider = (props) => {
         }
     };
 
+    const releaseFavoriteMovie = (id) => {
+        return fetch(`http://localhost:8080/favoriteMovies/${id}`, {
+            method: 'DELETE',
+        }).then(getFavoriteMovies)
+    }
+
     return (
         <DataContext.Provider value={{
-            movie, fetchMoviesJSON, fetchNewMoviesById, favoriteMovie, favoriteMoviePost, dbFavMovies, getFavoriteMovies
+            movie, fetchMoviesJSON, fetchNewMoviesById, favoriteMovie, 
+            favoriteMoviePost, dbFavMovies, getFavoriteMovies, releaseFavoriteMovie
         }} >
             {props.children}
         </DataContext.Provider>

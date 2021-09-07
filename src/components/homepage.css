@@ -77,12 +77,15 @@ body {
   color: black;
 }
 
-.noMovie {
-  padding-top: 1rem;
-  text-decoration: solid;
-  color: white;
-}
-
 .favoriteButton {
   margin-left: 10px;
+}
+
+.castList {
+float: left;
+margin: 5px;
+color: white;
+}
+.castH3  {
+color: white;
 }

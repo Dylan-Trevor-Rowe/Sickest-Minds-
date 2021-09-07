@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import { Card, Button } from 'react-bootstrap';
+import { scryRenderedComponentsWithType } from 'react-dom/test-utils';
 import { useHistory } from 'react-router-dom';
 import { DataContext } from "./DataProvider";
 import './homepage.css'
@@ -20,6 +21,7 @@ export const SearchCards = (props) => {
     } else {
 
       const postObject = {
+        movieId: parseInt(e.target.id),
         title: e.target.value,
         posterPath: e.target.name
       }
@@ -34,10 +36,11 @@ export const SearchCards = (props) => {
   const clickEvent = async (e) => {
 
     await fetchNewMoviesById(parseInt(parseInt(e.target.id))).then(() => {
+      console.log(e.target.id)
       makePostRequest(e)
       window.alert('added to favorites')
     })
-  }
+  } 
 
   return <> {sliced.map((i, index) => {
     const path = i.poster_path

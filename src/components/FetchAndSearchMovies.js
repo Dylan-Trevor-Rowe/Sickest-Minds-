@@ -10,6 +10,7 @@ export const FetchAndSearchMovies = () => {
   const textInput = useRef()
 
   const submitMovie = () => {
+    // searches for relaetd movies
     fetchMoviesJSON(textInput.current.value)
     textInput.current.value = ''
   }

@@ -10,6 +10,7 @@ import { FetchAndSearchMovies } from './components/FetchAndSearchMovies'
 import { SearchedMovieInfo } from './components/movieInfo'
 import { DataProvider } from "./components/DataProvider";
 import { FavoriteMoviesCards } from './components/favorites';
+import { FavoritedMovieInfo } from './components/favoritedMovieInfo'
 
 function App() {
   return (
@@ -72,7 +73,14 @@ function App() {
               render={(matchProps) => {
                 return <FavoriteMoviesCards {...matchProps} />;
               }} />
-          </Container>
+       </Container>
+            <Route
+            exact
+            path='/favoritemovies/:movieId(\d+)'
+            render={(matchProps) => {
+              return <FavoritedMovieInfo {...matchProps} />;
+            }}
+          />
         </DataProvider>
       </BrowserRouter>
     </>
