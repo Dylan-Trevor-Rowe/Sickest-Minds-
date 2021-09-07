@@ -1,36 +1,14 @@
 {
-  "id": [
+  "favoriteMovies": [
     {
-      "movieId": 13640,
+      "title": "We Can Be Heroes",
+      "posterPath": "/1S21HpcKY6uQ9UAw68aICmrJaq6.jpg",
       "id": 1
     },
     {
-      "movieId": 1924,
+      "title": "Disney's Christmas Favorites",
+      "posterPath": "/eBGIWcnNLIWSgbi9pwSkpafm7cu.jpg",
       "id": 2
-    },
-    {
-      "movieId": 514872,
-      "id": 3
-    },
-    {
-      "movieId": 268,
-      "id": 4
-    },
-    {
-      "movieId": 12690,
-      "id": 5
-    },
-    {
-      "movieId": 497,
-      "id": 6
-    },
-    {
-      "movieId": 218957,
-      "id": 7
-    },
-    {
-      "movieId": 497269,
-      "id": 8
     }
   ]
 }

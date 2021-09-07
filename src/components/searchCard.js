@@ -6,46 +6,54 @@ import './homepage.css'
 
 export const SearchCards = (props) => {
 
-  const { movieIdPost, getMovieIdList, movieId } = useContext(DataContext)
+  const { fetchNewMoviesById, favoriteMoviePost, dbFavMovies, getFavoriteMovies } = useContext(DataContext)
 
   useEffect(() => {
-    getMovieIdList()
+    getFavoriteMovies()
   }, [])
+
+  const makePostRequest = (e) => {
+    const movieId = dbFavMovies.map(id => id.movieId)
+    if (movieId.includes(parseInt(e.target.value))) {
+      window.alert('already a favorite')
+
+    } else {
+
+      const postObject = {
+        title: e.target.value,
+        posterPath: e.target.name
+      }
+      favoriteMoviePost(postObject)
+    }
+  }
 
   const history = useHistory()
 
   const sliced = props.movie.slice(0, 3)
 
   const clickEvent = async (e) => {
-    const mapped = movieId.map(val => val.movieId)
 
-    if (mapped.includes(parseInt(e.target.value))) {
-      window.alert('already favorited')
-
-    } else {
-      const idPost = { movieId: parseInt(e.target.value) }
-      movieIdPost(idPost)
+    await fetchNewMoviesById(parseInt(parseInt(e.target.id))).then(() => {
+      makePostRequest(e)
       window.alert('added to favorites')
-      await getMovieIdList()
-    }
+    })
   }
 
   return <> {sliced.map((i, index) => {
     const path = i.poster_path
 
     const handleClick = () => history.push(`/searchedmovies/${i.id}/movieInfo`)
-    
+
     return (
       <div key={index}>
         <div className="row-eq-height">
           <Card className="searchCard" style={{ width: "18rem" }}>
-            {path ? <Card.Img style={{ height: "15rem" }}
+            <Card.Img style={{ height: "15rem" }}
               variant='top' src={"https://image.tmdb.org/t/p/w500/" + path} />
-              : <h1 className="d-flex align-self-center">no image</h1>}
             <Card.Body className="buttonContainer">
               <Card.Title>{i.title}</Card.Title>
               <Button className="infoButton" onClick={handleClick} variant='primary'>Movie info</Button>
-              <Button onClick={clickEvent} value={i.id} className="favoriteButton">add to favorites</Button>
+              <Button onClick={clickEvent} name={path} value={i.title} id={i.id} className="favoriteButton">add to favorites</Button>
             </Card.Body>
           </Card>
         </div>

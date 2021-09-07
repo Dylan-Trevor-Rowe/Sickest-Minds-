@@ -5,7 +5,7 @@ import { DataContext } from "./DataProvider";
 
 export const FetchAndSearchMovies = () => {
 
-  const { movie, fetchMoviesJSON} = useContext(DataContext)
+  const { movie, fetchMoviesJSON } = useContext(DataContext)
 
   const textInput = useRef()
 

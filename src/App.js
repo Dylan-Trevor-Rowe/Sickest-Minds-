@@ -6,9 +6,10 @@ import { MovieReview } from "./components/moviedetails";
 import { NavBar } from "./components/Nav";
 import { Container } from "react-bootstrap";
 import { HomePage } from "./components/homepage";
-import { FetchAndSearchMovies } from './components/FetchAndSearchMovies.jsx'
+import { FetchAndSearchMovies } from './components/FetchAndSearchMovies'
 import { SearchedMovieInfo } from './components/movieInfo'
 import { DataProvider } from "./components/DataProvider";
+import { FavoriteMoviesCards } from './components/favorites';
 
 function App() {
   return (
@@ -63,6 +64,15 @@ function App() {
               return <SearchedMovieInfo {...matchProps} />;
             }}
           />
+          <Container className='card-Class'>
+            <Route
+              exact
+              path='/favoritemovies'
+              component={FavoriteMoviesCards}
+              render={(matchProps) => {
+                return <FavoriteMoviesCards {...matchProps} />;
+              }} />
+          </Container>
         </DataProvider>
       </BrowserRouter>
     </>
