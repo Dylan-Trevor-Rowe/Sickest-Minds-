@@ -11,6 +11,7 @@ import { SearchedMovieInfo } from './components/movieInfo'
 import { DataProvider } from "./components/DataProvider";
 import { FavoriteMoviesCards } from './components/favorites';
 import { FavoritedMovieInfo } from './components/favoritedMovieInfo'
+import { MovieReviewForm } from './components/reviewForm'
 
 function App() {
   return (
@@ -35,6 +36,16 @@ function App() {
               return <MovieReview {...matchProps} />;
             }}
           />
+          <Container className='card-Class'>
+            <Route
+              exact
+              path='/reviews'
+              component={MovieCard}
+              render={(matchProps) => {
+                return <MovieCard {...matchProps} />;
+              }}
+            />
+          </Container>
           <Container className='card-Class'>
             <Route
               exact
@@ -73,12 +84,19 @@ function App() {
               render={(matchProps) => {
                 return <FavoriteMoviesCards {...matchProps} />;
               }} />
-       </Container>
-            <Route
+          </Container>
+          <Route
             exact
             path='/favoritemovies/:movieId(\d+)'
             render={(matchProps) => {
               return <FavoritedMovieInfo {...matchProps} />;
+            }}
+          />
+          <Route
+            exact
+            path='/favoritemovies/:movieReviewId(\d+)/moviereview'
+            render={(matchProps) => {
+              return <MovieReviewForm {...matchProps} />;
             }}
           />
         </DataProvider>

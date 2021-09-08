@@ -15,7 +15,7 @@ export const SearchCards = (props) => {
 
   const makePostRequest = (e) => {
     const movieId = dbFavMovies.map(id => id.movieId)
-    if (movieId.includes(parseInt(e.target.value))) {
+    if (movieId.includes(parseInt(e.target.id))) {
       window.alert('already a favorite')
 
     } else {
@@ -26,6 +26,7 @@ export const SearchCards = (props) => {
         posterPath: e.target.name
       }
       favoriteMoviePost(postObject)
+      window.alert('added to favorites')  
     }
   }
 
@@ -38,7 +39,6 @@ export const SearchCards = (props) => {
     await fetchNewMoviesById(parseInt(parseInt(e.target.id))).then(() => {
       console.log(e.target.id)
       makePostRequest(e)
-      window.alert('added to favorites')
     })
   } 
 
