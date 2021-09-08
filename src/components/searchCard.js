@@ -59,7 +59,7 @@ export const SearchCards = (props) => {
               <Button onClick={clickEvent} name={path} value={i.title} id={i.id} className="favoriteButton">add to favorites</Button>
             </Card.Body>
           </Card>
-        </div>
+        </div>  
       </div>
     );
   })}

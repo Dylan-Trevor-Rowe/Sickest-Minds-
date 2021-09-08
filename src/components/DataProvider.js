@@ -8,7 +8,6 @@ export const DataProvider = (props) => {
     const [dbFavMovies, setDbFavMovie] = useState([])
     const [favoriteMovie, setFavoritedMovie] = useState({})
     const [reviewedMovies, setReviewedMovies] = useState([])
-    console.log(reviewedMovies, 'provider')
 
     const fetchMoviesJSON = async (title) => {
         try {

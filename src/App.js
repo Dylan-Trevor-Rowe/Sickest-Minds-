@@ -58,9 +58,16 @@ function App() {
           </Container>
           <Route
             exact
-            path='/MovieCards/:movieId(\d+)/movie'
+            path='/MovieCards/:id(\d+)/movie'
             render={(matchProps) => {
               return <MovieReview {...matchProps} />;
+            }}
+          />
+          <Route
+            exact
+            path='/MovieCards/:movieId(\d+)/editreview'
+            render={(matchProps) => {
+              return <MovieReviewForm {...matchProps} />;
             }}
           />
           <Route
