@@ -37,7 +37,6 @@ export const SearchCards = (props) => {
   const clickEvent = async (e) => {
 
     await fetchNewMoviesById(parseInt(parseInt(e.target.id))).then(() => {
-      console.log(e.target.id)
       makePostRequest(e)
     })
   } 

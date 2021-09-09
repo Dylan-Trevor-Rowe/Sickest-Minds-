@@ -5,7 +5,7 @@ import { DataContext } from "./DataProvider";
 import "./homepage.css";
 
 export const MovieCard = () => {
-  const { reviewedMovies, getReviewedMovies, releaseReview, dbFavoriteMovies} = useContext(DataContext)
+  const { reviewedMovies, getReviewedMovies, releaseReview } = useContext(DataContext)
 
   useEffect(() => {
     getReviewedMovies()
@@ -24,7 +24,7 @@ export const MovieCard = () => {
     const handleClick = () => history.push(`/movieCards/${i.movieId}/movie`)
 
     const editReview = () => history.push(`/movieCards/${i.id}/movie`)
-    
+
     return (
       <div key={i.id}>
         <Card style={{ width: "18rem", minHeight: "32rem", maxHeight: "32rem", marginTop: "1rem" }}>
