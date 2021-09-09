@@ -37,7 +37,6 @@ export const SearchCards = (props) => {
   const clickEvent = async (e) => {
 
     await fetchNewMoviesById(parseInt(parseInt(e.target.id))).then(() => {
-      console.log(e.target.id)
       makePostRequest(e)
     })
   } 
@@ -59,7 +58,7 @@ export const SearchCards = (props) => {
               <Button onClick={clickEvent} name={path} value={i.title} id={i.id} className="favoriteButton">add to favorites</Button>
             </Card.Body>
           </Card>
-        </div>
+        </div>  
       </div>
     );
   })}
