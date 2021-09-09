@@ -13,11 +13,7 @@ export const MovieReview = (props) => {
   }, [])
 
   const movieId  = props.match.params
-  console.log(parseInt(movieId.id), 'movieId')
-  console.log(reviewedMovies)
-
   const foundReviews = reviewedMovies.find(review => parseInt(movieId.id) === review.movieId)
-  console.log(foundReviews, typeof foundReviews)
   const path = foundReviews.poster
 
   return (

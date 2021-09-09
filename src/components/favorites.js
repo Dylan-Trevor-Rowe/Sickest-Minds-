@@ -19,13 +19,16 @@ export const FavoriteMoviesCards = () => {
 
   return <>
     {dbFavMovies.map((i) => {
-      const path = i.posterPath
+      const favoritePath = i.posterPath
+      const path = i.posterPath.split('/')
+      const [delimiter, string ] = path
+  
       const handleClick = () => history.push(`/favoritemovies/${i.movieId}/`)
-      const movieForm = () => history.push(`favoritemovies/${i.movieId}/moviereview`)
+      const movieForm = () => history.push(`favoritemovies/${string}/${i.id}/${i.movieId}/moviereview`)
       return (
         <div key={i.id}>
           <Card style={{ width: "18rem", minHeight: "32rem", maxHeight: "32rem", marginTop: "1rem" }}>
-            <Card.Img height='400rem' variant='top' src={"https://image.tmdb.org/t/p/w500/" + path} />
+            <Card.Img height='400rem' variant='top' src={"https://image.tmdb.org/t/p/w500/" + favoritePath} />
             <Card.Body className="d-flex row justify-content-center">
               <Button onClick={handleClick} className="align-self-center btn-sm" variant='danger'>movieInfo</Button>
               <Button onClick={releaseMovie} value={i.id} className="mt-1 align-self-center btn-sm" variant='dark'>delete favorite</Button>

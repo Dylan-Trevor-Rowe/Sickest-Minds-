@@ -63,13 +63,13 @@ function App() {
               return <MovieReview {...matchProps} />;
             }}
           />
-          <Route
+          {/* <Route
             exact
             path='/MovieCards/:movieId(\d+)/editreview'
             render={(matchProps) => {
               return <MovieReviewForm {...matchProps} />;
             }}
-          />
+          /> */}
           <Route
             exact
             path='/searchedmovies'
@@ -100,8 +100,7 @@ function App() {
             }}
           />
           <Route
-            exact
-            path='/favoritemovies/:movieReviewId(\d+)/moviereview'
+            path='/favoritemovies/:path/:id(\d+)/:movieId(\d+)/moviereview'
             render={(matchProps) => {
               return <MovieReviewForm {...matchProps} />;
             }}

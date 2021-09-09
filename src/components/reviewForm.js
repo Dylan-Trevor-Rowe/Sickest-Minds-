@@ -1,14 +1,14 @@
-import React, { useRef, useState, useContext } from 'react'
-import { Form, Button } from "react-bootstrap";
+import React, { useRef, useState, useContext, useEffect } from 'react'
+import { Form, Button } from "react-bootstrap";     
 import { useHistory } from 'react-router';
 import { Rating, RatingView } from 'react-simple-star-rating'
 import { DataContext } from './DataProvider';
 
 
 export const MovieReviewForm = (props) => {
-    const [rating, setRating] = useState(0) // initial rating value
-    const { movieReviewId } = props.match.params
-    const { dbFavMovies, reviewedMoviePost } = useContext(DataContext)
+    const [rating, setRating] = useState(0)
+    const { id, movieId, path } = props.match.params
+    const { reviewedMoviePost, reviewedMovies, updateReview, getReviewedMovies} = useContext(DataContext)
     const textInput = useRef()
     const history = useHistory()
 
@@ -16,16 +16,23 @@ export const MovieReviewForm = (props) => {
         setRating(rate)
     }
 
+    useEffect(() =>{
+        getReviewedMovies()
+    }, [])
+
+    console.log(reviewedMovies, 'reviewed movies')
+
     const onClickReview = () => {
-        const foundMovieObject = dbFavMovies.find(movie => movie.movieId === Number(movieReviewId))
 
         const reviewBody = {
-            movieId: Number(movieReviewId),
+            favoriteMovieId: parseInt(id),
+            movieId: Number(movieId),
             rating: rating,
             review: textInput.current.value,
-            poster: foundMovieObject.posterPath
+            poster: path
         }
         reviewedMoviePost(reviewBody).then(() => {
+            getReviewedMovies()
             history.push('/')
         })
     }

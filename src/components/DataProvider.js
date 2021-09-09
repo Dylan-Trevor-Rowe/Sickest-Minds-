@@ -95,11 +95,23 @@ export const DataProvider = (props) => {
         }).then(getReviewedMovies)
     }
 
+    const updateReview = async id => {
+        const result = await fetch(`http://localhost:8080/review/${id.movieId}`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(id)
+        })
+        return getReviewedMovies(result)
+    
+      }
+
     return (
         <DataContext.Provider value={{
             movie, fetchMoviesJSON, fetchNewMoviesById, favoriteMovie,
             favoriteMoviePost, dbFavMovies, getFavoriteMovies, releaseFavoriteMovie,
-            reviewedMovies, getReviewedMovies, reviewedMoviePost, releaseReview
+            reviewedMovies, getReviewedMovies, reviewedMoviePost, releaseReview, updateReview
         }} >
             {props.children}
         </DataContext.Provider>

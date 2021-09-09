@@ -51,39 +51,20 @@
   ],
   "review": [
     {
+      "favoriteMovieId": 4,
       "movieId": 335984,
-      "rating": 4,
-      "review": "Almost as good as the original bro",
-      "poster": "/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg",
-      "id": 2
+      "rating": 5,
+      "review": "Almost as good as the original!",
+      "poster": "gajva2L0rPYkEWjzgFlBXCAVBE5.jpg",
+      "id": 1
     },
     {
+      "favoriteMovieId": 6,
       "movieId": 68,
       "rating": 5,
-      "review": "Terry Gilliam's best.",
-      "poster": "/d0PibPzCK4fVikjoD1PqHovbvkt.jpg",
-      "id": 3
-    },
-    {
-      "movieId": 294963,
-      "rating": 4,
-      "review": "You will never forget this movie and it will scar you forever.",
-      "poster": "/hUPp0bZkspXGifzkeYqPpRLugn9.jpg",
-      "id": 4
-    },
-    {
-      "movieId": 5683,
-      "rating": 4,
-      "review": "The bike is not for sale Francis.",
-      "poster": "/414IUXc54mrhX88ZUQiRDLXn01i.jpg",
-      "id": 5
-    },
-    {
-      "movieId": 59,
-      "rating": 5,
-      "review": "Pretty crazy twist",
-      "poster": "/rrc6GiAKHDrUjp8OmdVng9hRWBn.jpg",
-      "id": 6
+      "review": "I like this one!",
+      "poster": "d0PibPzCK4fVikjoD1PqHovbvkt.jpg",
+      "id": 2
     }
   ]
 }
