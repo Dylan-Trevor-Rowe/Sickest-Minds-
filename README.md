@@ -1,18 +1,23 @@
-# Days-Since
-Days-Since is a Full CRUD Full Stack application that I built as my final-capstone at Nashville Software School.  
-The Application was built to aid Multiple-Sclerosis patients in tracking their disease progression over time.
+# Sickest Minds
 
-A user can track their daily symptoms, view their all time average (sleep, emotional-well-being, pain and fatigue scales), journal about their day, set goals
-and log them if completed, and also post and comment on helpful articles that correlate to the disease. 
+Sickest Minds is a Full CRUD responsive application that I built as a portfolio piece. It is an evergoing ongoing work in progress.
+The Application was built with movie nerds (me) in mind. 
 
-![Days-Since](https://github.com/Dylan-Trevor-Rowe/days-since-client/blob/main/src/components/Days-Since%20read%20me%20picture.png)
+# Overview
+
+A user can log in to the application and begin by searching for a movie. I used The Move Database api for the search function. 
+A user has the ability to see the information of eached movie that pops up in the search (overview, release date, etc ).
+A user can then favorite a movie. All of the users favorited movies will render into the favorites component ( favorites view ).
+The user can check out additional info about a movie once it is favorited. There is an option on each card to view info. 
+A user can delete their favorites at will. Once a movie has been favorited, the user can then write a review for the movie. 
+After the user has written a review it can be viewed in the reviewed movies page or the sites homepage. 
+The user can then update, or delete each individual movie at their will. 
+
+
+![Sickest Minds](https://github.com/Dylan-Trevor-Rowe/Sickest-Minds-/blob/main/src/components/sickestMindsScreenshot.jpg)
 
 ## Technologies 
-Technologies used include: React, React-Router-Dom,  Python, Django, and Material Ui.
-
-### Server Side link
-To view the server side repo and run the server for this project head to: https://github.com/Dylan-Trevor-Rowe/days_since_server
-
+Technologies used include: React, React-Router-Dom,  Json server( as a fake rest api ), and React-Bootstrap
 
 ### `npm start`
 
