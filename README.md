@@ -1,6 +1,6 @@
 # Sickest Minds
 
-Sickest Minds is a Full CRUD responsive application that I built as a portfolio piece. It is an evergoing ongoing work in progress.
+Sickest Minds is a Full CRUD, responsive application that I built as a portfolio piece. It is an evergoing ongoing work in progress.
 The Application was built with movie nerds (me) in mind. 
 
 # Overview
