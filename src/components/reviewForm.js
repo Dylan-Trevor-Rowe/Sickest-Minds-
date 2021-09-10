@@ -1,4 +1,4 @@
-import React, { useRef, useState, useContext, useEffect } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import { Form, Button } from "react-bootstrap";
 import { useHistory } from 'react-router';
 import { Rating, RatingView } from 'react-simple-star-rating'

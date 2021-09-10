@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from 'react'
 import { Card, Button } from 'react-bootstrap';
-import { scryRenderedComponentsWithType } from 'react-dom/test-utils';
 import { useHistory } from 'react-router-dom';
 import { DataContext } from "./DataProvider";
 import './homepage.css'
@@ -14,7 +13,6 @@ export const SearchCards = (props) => {
   }, [])
 
   const user = localStorage.getItem('local_user')
-  console.log(user)
 
   const makePostRequest = (e) => {
     const movieId = dbFavMovies.map(id => id.movieId)

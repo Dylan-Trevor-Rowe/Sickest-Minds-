@@ -1,8 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./components/homepage.css";
 import './components/login.css'
-import React, { useEffect, useState } from 'react'
-import { Route, BrowserRouter, Switch } from "react-router-dom";
+import { Route, BrowserRouter } from "react-router-dom";
 import { MovieCard } from "./components/card";
 import { MovieReview } from "./components/moviedetails";
 import { NavBar } from "./components/Nav";
@@ -50,7 +49,11 @@ function App() {
               path='/'
               render={(matchProps) => {
                 return (
-                  <><HomePage /> <MovieCard {...matchProps} /></>);
+                  <>
+                    <HomePage />
+                    <MovieCard
+                      {...matchProps} />
+                  </>);
               }} />
           </Container>
           <Route

@@ -5,17 +5,14 @@ import { DataContext } from "./DataProvider";
 import sickestMinds from "./sickestMinds.jpg";
 import "./homepage.css";
 
-
 export const NavBar = () => {
   const { getMovieIdList } = useContext(DataContext)
-
 
   const handleClick = () => {
     getMovieIdList()
   }
 
     return (
-
       <Navbar className="navBar" bg='white' variant='light' expand="lg">
         <Container className='navContainer'>
           <Image src={sickestMinds}></Image>

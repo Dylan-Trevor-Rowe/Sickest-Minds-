@@ -43,8 +43,8 @@ export const FavoritedMovieInfo = (props) => {
             <h4 className='reviewText'> Release Date: {favoriteMovieInfo.release_date}</h4>
             <p className='reviewText'>{favoriteMovieInfo.overview}</p>
         </Container>
-        <Container className="d-flex justify-content-center">
-        <h3 className="castH3 text-center">Starring:</h3>
+        <Container className="d-flex flex-wrap fluid justify-content-center">
+            <h3 className="castH3 text-center">Starring:</h3>
             {movieCredits.map((i) => {
                 return (
                     <div key={i.id}>

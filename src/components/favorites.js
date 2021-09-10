@@ -26,7 +26,9 @@ export const FavoriteMoviesCards = () => {
       const [delimiter, string ] = path
   
       const handleClick = () => history.push(`/favoritemovies/${i.movieId}/`)
+
       const movieForm = () => history.push(`favoritemovies/${string}/${i.movieId}/moviereview`)
+      
       return (
         <div key={i.id}>
           <Card style={{ width: "18rem", minHeight: "32rem", maxHeight: "32rem", marginTop: "1rem" }}>
