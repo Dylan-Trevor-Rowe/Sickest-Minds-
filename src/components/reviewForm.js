@@ -6,10 +6,14 @@ import { DataContext } from './DataProvider';
 
 
 export const MovieReviewForm = (props) => {
+
+  const [localState, setLocalState] = useState({})
   const [rating, setRating] = useState(0)
   const { id, movieId, path } = props.match.params
-  const { reviewedMoviePost, reviewedMovies, updateReview, getReviewedMovies } = useContext(DataContext)
-  const textInput = useRef()
+  const { reviewedMoviePost, updateReview, getReviewedMovies } = useContext(DataContext)
+
+  console.log(props.match.params)
+
   const history = useHistory()
 
   const handleRating = (rate) => {
@@ -20,26 +24,50 @@ export const MovieReviewForm = (props) => {
     getReviewedMovies()
   }, [])
 
-  const onClickReview = () => {
-
-    const reviewBody = {
-      favoriteMovieId: parseInt(id),
-      movieId: Number(movieId),
-      rating: rating,
-      review: textInput.current.value,
-      poster: path
-    }
-    reviewedMoviePost(reviewBody).then(() => {
-      getReviewedMovies()
-      history.push('/')
-    })
+  const handleControlledInputChange = (e) => {
+    const newReview = Object.assign({}, localState)
+    newReview[e.target.name] = e.target.value
+    setLocalState(newReview)
   }
+
+  const onClickReview = () => {
+    
+    if (id) {
+
+      updateReview({
+        id: parseInt(id),
+        favoriteMovieId: parseInt(id),
+        movieId: Number(movieId),
+        rating: rating,
+        review: localState.reviewText,
+        poster: path
+      })
+      
+      history.push('/')
+
+    } else {
+
+
+      reviewedMoviePost({
+        favoriteMovieId: parseInt(id),
+        movieId: Number(movieId),
+        rating: rating,
+        review: localState.reviewText,
+        poster: path
+
+      }).then(() => {
+        getReviewedMovies()
+        history.push('/')
+      })
+    }
+  }
+
 
   return <>
     <Form className=" text-center reviewForm">
-      <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+      <Form.Group className="mb-3">
         <Form.Label>add your review</Form.Label>
-        <Form.Control ref={textInput} as="textarea" rows={3} />
+        <Form.Control onChange={handleControlledInputChange} defaultValue={localState.reviewText} name="reviewText" type="text" as="textarea" rows={3} />
       </Form.Group>
       <div className='mb-2'>
         <Rating onClick={handleRating} ratingValue={rating} />

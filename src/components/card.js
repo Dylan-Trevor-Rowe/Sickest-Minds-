@@ -21,9 +21,9 @@ export const MovieCard = () => {
 
     const path = i.poster
 
-    const handleClick = () => history.push(`/movieCards/${i.movieId}/movie`)
+    const handleClick = () => history.push(`/movieCards/${i.id}/movie`)
 
-    const editReview = () => history.push(`/movieCards/${i.id}/movie`)
+    const editReview = () => history.push(`/movieCards/${i.id}/${i.movieId}/${path}/editreview`)
 
     return (
       <div key={i.id}>
@@ -32,7 +32,7 @@ export const MovieCard = () => {
           <Card.Body className="d-flex row justify-content-center">
             <Button onClick={handleClick} className="align-self-center btn-sm" variant='danger'>read review</Button>
             <Button onClick={releaseReviewedMovie} value={i.id} className="mt-1 align-self-center btn-sm" variant='dark'>delete review</Button>
-            <Badge className="m-1" bg="dark">edit review</Badge>
+            <Badge onClick={editReview} className="m-1" bg="dark">edit review</Badge>
           </Card.Body>
         </Card>
       </div>
