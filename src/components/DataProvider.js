@@ -38,16 +38,14 @@ export const DataProvider = (props) => {
 
     const reviewedMoviePost = async (review) => {
         try {
-            const response = await fetch('http://localhost:8080/review', {
+            await fetch('http://localhost:8080/review', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify(review)
             })
-
-            const reviewData = await response.json()
-            return getReviewedMovies(reviewData)
+            return getReviewedMovies()
 
         } catch (error) {
             window.alert('error')
@@ -96,16 +94,16 @@ export const DataProvider = (props) => {
     }
 
     const updateReview = async id => {
-        const result = await fetch(`http://localhost:8080/review/${id.movieId}`, {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(id)
+        const result = await fetch(`http://localhost:8080/review/${id.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(id)
         })
         return getReviewedMovies(result)
-    
-      }
+
+    }
 
     return (
         <DataContext.Provider value={{

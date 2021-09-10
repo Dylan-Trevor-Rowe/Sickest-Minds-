@@ -5,16 +5,20 @@ import { DataContext } from "./DataProvider";
 import { RatingView } from 'react-simple-star-rating'
 
 export const MovieReview = (props) => {
-
+  
   const { reviewedMovies, getReviewedMovies } = useContext(DataContext)
+  console.log(reviewedMovies)
 
   useEffect(() => {
     getReviewedMovies()
   }, [])
 
-  const movieId  = props.match.params
-  const foundReviews = reviewedMovies.find(review => parseInt(movieId.id) === review.movieId)
-  const path = foundReviews.poster
+  const {id} = props.match.params
+
+  const reviews = reviewedMovies.find(movie => movie.id === Number(id))
+
+
+  const path = reviews.poster
 
   return (
     <Container>
@@ -22,9 +26,9 @@ export const MovieReview = (props) => {
         <Image className='filteredImage' fluid src={"https://image.tmdb.org/t/p/w500/" + path} />
       </Col>
       <Col className="d-flex justify-content-center">
-        <RatingView ratingValue={foundReviews.rating} />
+        <RatingView ratingValue={reviews.rating} />
       </Col>
-      <p className='reviewText text-center'>{foundReviews.review}</p>
+      <p className='reviewText text-center'>{reviews.review}</p>
     </Container>
   );
 };
