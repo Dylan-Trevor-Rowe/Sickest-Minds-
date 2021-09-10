@@ -1,15 +1,16 @@
 import React, { useRef } from 'react'
+import { Container, Button } from 'react-bootstrap'
 import { Link, useHistory } from 'react-router-dom'
 import './login.css'
 
 export const Login = (props) => {
-  
+
     const email = useRef()
     const password = useRef()
     const existDialog = useRef()
     const passwordDialog = useRef()
     const history = useHistory()
-   
+
     const existingUserCheck = () => {
         return fetch(`http://localhost:8080/users?email=${email.current.value}`)
             .then((_) => _.json())
@@ -31,24 +32,25 @@ export const Login = (props) => {
         })
     }
 
-    return (
-        <main className="container--login">
+    return <>
+        <style type="text/css">
+            {`.navbar {display: none}`}
+        </style>
+        <Container className="container--login">
             <dialog className="dialog dialog--auth" ref={existDialog}>
                 <div>User does not exist</div>
-                <button className="button--close" onClick={(e) => existDialog.current.close()}>
+                <Button className=" pt-2 button--close" onClick={(e) => existDialog.current.close()}>
                     Close
-                </button>
+                </Button>
             </dialog>
             <dialog className="dialog dialog--password" ref={passwordDialog}>
-                <div>Password does not match</div>
-                <button className="button--close" onClick={(e) => passwordDialog.current.close()}>
+                <div className="pb-1">Password does not match</div>
+                <Button className="button--close" onClick={(e) => passwordDialog.current.close()}>
                     Close
-                </button>
+                </Button>
             </dialog>
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1></h1>
-                    <h2 className="login__welcome">DaySheet</h2>
                     <fieldset>
                         <label htmlFor="inputEmail"> Email address </label>
                         <input
@@ -64,16 +66,16 @@ export const Login = (props) => {
                     </fieldset>
                     <fieldset>
                         <label htmlFor="inputPassword"> Password </label>
-                        <input  ref={password} type="password" id="password" defaultValue="me" className="form-control" placeholder="Password" required />
+                        <input ref={password} type="password" id="password" defaultValue="" className="form-control" placeholder="Password" required />
                     </fieldset>
                     <fieldset>
-                        <button id="btn-login" type="submit">Sign in</button>
+                        <Button id="btn-login" type="submit">Sign in</Button>
                     </fieldset>
                 </form>
             </section>
             <section className="link--register">
-                <Link to="/register">Not a member yet?</Link>
+                <Link className="text-white" to="/register">Not a member yet?</Link>
             </section>
-        </main>
-    )
+        </Container>
+    </>
 }

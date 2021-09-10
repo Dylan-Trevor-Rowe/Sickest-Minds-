@@ -1,6 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./components/homepage.css";
-import { Route, BrowserRouter } from "react-router-dom";
+import './components/login.css'
+import React, { useEffect, useState } from 'react'
+import { Route, BrowserRouter, Switch } from "react-router-dom";
 import { MovieCard } from "./components/card";
 import { MovieReview } from "./components/moviedetails";
 import { NavBar } from "./components/Nav";
@@ -12,12 +14,35 @@ import { DataProvider } from "./components/DataProvider";
 import { FavoriteMoviesCards } from './components/favorites';
 import { FavoritedMovieInfo } from './components/favoritedMovieInfo'
 import { MovieReviewForm } from './components/reviewForm'
+import { Login } from './components/login'
+import { Register } from "./components/register";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <DataProvider>
+          <Route
+            exact path='/login'
+            component={Login}
+            render={(props) => (
+              <Login {...props} />
+            )}
+          />
+          <Route
+            exact path='/register'
+            component={Register}
+            render={(props) => (
+              <Register {...props} />
+            )}
+          />
+          <Route
+            path="/logout"
+            render={(props) => {
+              localStorage.removeItem('local_user')
+              props.history.push('/login')
+            }}
+          ></Route>
           <NavBar />
           <Container className='card-Class'>
             <Route

@@ -9,6 +9,8 @@ export const FavoriteMoviesCards = () => {
   const history = useHistory()
   const { dbFavMovies, getFavoriteMovies, releaseFavoriteMovie } = useContext(DataContext)
 
+  const filteredUsers = dbFavMovies.filter(movies => movies.userId === Number(localStorage.getItem('local_user')))
+
   useEffect(() => {
     getFavoriteMovies()
   }, [])
@@ -18,7 +20,7 @@ export const FavoriteMoviesCards = () => {
   }
 
   return <>
-    {dbFavMovies.map((i) => {
+    {filteredUsers.map((i) => {
       const poster = i.posterPath
       const path = i.posterPath.split('/')
       const [delimiter, string ] = path

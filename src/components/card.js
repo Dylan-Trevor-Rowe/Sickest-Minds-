@@ -17,7 +17,10 @@ export const MovieCard = () => {
     releaseReview(e.target.value)
   }
 
-  return <> {reviewedMovies.map((i) => {
+  const filteredUserMovies = reviewedMovies.filter(movies => movies.userId === Number(localStorage.getItem('local_user')))
+
+
+  return <> {filteredUserMovies.map((i, index) => {
 
     const path = i.poster
 
@@ -25,8 +28,8 @@ export const MovieCard = () => {
 
     const editReview = () => history.push(`/movieCards/${i.id}/${i.movieId}/${path}/editreview`)
 
-    return (
-      <div key={i.id}>
+    return <>
+      <div key={index}>
         <Card style={{ width: "18rem", minHeight: "32rem", maxHeight: "32rem", marginTop: "1rem" }}>
           <Card.Img height='400rem' variant='top' src={"https://image.tmdb.org/t/p/w500/" + '/'+path} />
           <Card.Body className="d-flex row justify-content-center">
@@ -36,7 +39,7 @@ export const MovieCard = () => {
           </Card.Body>
         </Card>
       </div>
-    );
+    </>
   })}
   </>
 };

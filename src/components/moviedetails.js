@@ -7,7 +7,6 @@ import { RatingView } from 'react-simple-star-rating'
 export const MovieReview = (props) => {
   
   const { reviewedMovies, getReviewedMovies } = useContext(DataContext)
-  console.log(reviewedMovies)
 
   useEffect(() => {
     getReviewedMovies()
@@ -16,7 +15,6 @@ export const MovieReview = (props) => {
   const {id} = props.match.params
 
   const reviews = reviewedMovies.find(movie => movie.id === Number(id))
-
 
   const path = reviews.poster
 

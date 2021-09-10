@@ -1,4 +1,5 @@
 import React, { useRef } from "react"
+import { Button } from 'react-bootstrap'
 import "./login.css"
 import sickestMinds from "./sickestMinds.jpg";
 
@@ -48,16 +49,15 @@ export const Register = (props) => {
 
   return (
     <main style={{ textAlign: "center" }}>
-
+      <style type="text/css">
+        {`.navbar {display: none}`}
+      </style>
       <dialog className="dialog dialog--password" ref={passwordDialog}>
         <div>Passwords do not match</div>
-        <button className="button--close" onClick={e => passwordDialog.current.close()}>Close</button>
+        <Button className="button--close" onClick={e => passwordDialog.current.close()}>Close</Button>
       </dialog>
-    
-
-      <form className="form--login" onSubmit={handleRegister}>   
-      <img className="registerImage" src={sickestMinds}></img> 
-        <h1 className="h3 mb-3 font-weight-normal">Register for Sickest Minds</h1>
+      <form className="form--login" onSubmit={handleRegister}>
+        <img className="registerImage" src={sickestMinds}></img>
         <fieldset>
           <label htmlFor="firstName"> First Name </label>
           <input ref={firstName} type="text"
@@ -99,9 +99,9 @@ export const Register = (props) => {
             required />
         </fieldset>
         <fieldset>
-          <button type="submit">
+          <Button variant='danger' type="submit">
             Sign in
-          </button>
+          </Button>
         </fieldset>
       </form>
     </main>

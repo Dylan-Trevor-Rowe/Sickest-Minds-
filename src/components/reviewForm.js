@@ -12,8 +12,6 @@ export const MovieReviewForm = (props) => {
   const { id, movieId, path } = props.match.params
   const { reviewedMoviePost, updateReview, getReviewedMovies } = useContext(DataContext)
 
-  console.log(props.match.params)
-
   const history = useHistory()
 
   const handleRating = (rate) => {
@@ -35,6 +33,7 @@ export const MovieReviewForm = (props) => {
     if (id) {
 
       updateReview({
+        userId: Number(localStorage.getItem('local_user')),
         id: parseInt(id),
         favoriteMovieId: parseInt(id),
         movieId: Number(movieId),
@@ -47,8 +46,8 @@ export const MovieReviewForm = (props) => {
 
     } else {
 
-
       reviewedMoviePost({
+        userId: Number(localStorage.getItem('local_user')),
         favoriteMovieId: parseInt(id),
         movieId: Number(movieId),
         rating: rating,
@@ -62,12 +61,11 @@ export const MovieReviewForm = (props) => {
     }
   }
 
-
   return <>
     <Form className=" text-center reviewForm">
       <Form.Group className="mb-3">
         <Form.Label>add your review</Form.Label>
-        <Form.Control onChange={handleControlledInputChange} defaultValue={localState.reviewText} name="reviewText" type="text" as="textarea" rows={3} />
+        <Form.Control onChange={handleControlledInputChange} default={localState.reviewText} name="reviewText" type="text" as="textarea" rows={3} />
       </Form.Group>
       <div className='mb-2'>
         <Rating onClick={handleRating} ratingValue={rating} />

@@ -13,6 +13,9 @@ export const SearchCards = (props) => {
     getFavoriteMovies()
   }, [])
 
+  const user = localStorage.getItem('local_user')
+  console.log(user)
+
   const makePostRequest = (e) => {
     const movieId = dbFavMovies.map(id => id.movieId)
     if (movieId.includes(parseInt(e.target.id))) {
@@ -21,6 +24,7 @@ export const SearchCards = (props) => {
     } else {
 
       const postObject = {
+        userId: Number(user),
         movieId: parseInt(e.target.id),
         title: e.target.value,
         posterPath: e.target.name
