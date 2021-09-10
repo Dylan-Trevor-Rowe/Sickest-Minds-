@@ -1,17 +1,17 @@
 import React, { useState, useContext, useEffect } from 'react'
 import { Form, Button } from "react-bootstrap";
 import { useHistory } from 'react-router';
-import { Rating, RatingView } from 'react-simple-star-rating'
+import { Rating } from 'react-simple-star-rating'
 import { DataContext } from './DataProvider';
 
 
 export const MovieReviewForm = (props) => {
 
-  const [localState, setLocalState] = useState({})
-  const [rating, setRating] = useState(0)
+  const [ratingState, setRating] = useState(0)
   const { id, movieId, path } = props.match.params
-  const { reviewedMoviePost, updateReview, getReviewedMovies } = useContext(DataContext)
-
+  console.log(props.match.params)
+  const { reviewedMoviePost, updateReview, getReviewedMovies, getReviewById, reviewsById } = useContext(DataContext)
+  const [localState, setLocalState] = useState({})
   const history = useHistory()
 
   const handleRating = (rate) => {
@@ -20,6 +20,9 @@ export const MovieReviewForm = (props) => {
 
   useEffect(() => {
     getReviewedMovies()
+    getReviewById(parseInt(id)).then((res) => {
+      setLocalState(res)
+    })
   }, [])
 
   const handleControlledInputChange = (e) => {
@@ -29,19 +32,17 @@ export const MovieReviewForm = (props) => {
   }
 
   const onClickReview = () => {
-    
-    if (id) {
 
+    if (id) {
       updateReview({
         userId: Number(localStorage.getItem('local_user')),
         id: parseInt(id),
         favoriteMovieId: parseInt(id),
         movieId: Number(movieId),
-        rating: rating,
+        rating: localState.rating,
         review: localState.reviewText,
         poster: path
       })
-      
       history.push('/')
 
     } else {
@@ -50,7 +51,7 @@ export const MovieReviewForm = (props) => {
         userId: Number(localStorage.getItem('local_user')),
         favoriteMovieId: parseInt(id),
         movieId: Number(movieId),
-        rating: rating,
+        rating: localState.rating,
         review: localState.reviewText,
         poster: path
 
@@ -65,10 +66,10 @@ export const MovieReviewForm = (props) => {
     <Form className=" text-center reviewForm">
       <Form.Group className="mb-3">
         <Form.Label>add your review</Form.Label>
-        <Form.Control onChange={handleControlledInputChange} default={localState.reviewText} name="reviewText" type="text" as="textarea" rows={3} />
+        <Form.Control onChange={handleControlledInputChange} defaultValue={localState.review} name="reviewText" type="text" as="textarea" rows={3} />
       </Form.Group>
       <div className='mb-2'>
-        <Rating onClick={handleRating} ratingValue={rating} />
+        <Rating onClick={handleRating} onChange={handleControlledInputChange} ratingValue={localState.rating} />
       </div>
       <Button onClick={onClickReview} variant="danger">
         Submit

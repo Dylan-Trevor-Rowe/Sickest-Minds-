@@ -161,8 +161,8 @@
       "id": 3,
       "favoriteMovieId": 3,
       "movieId": 694,
-      "rating": 3,
-      "review": "editing this shining review",
+      "rating": 2,
+      "review": "as",
       "poster": "b6ko0IKC8MdYBBPkkA1aBPLe2yz.jpg"
     },
     {
@@ -185,21 +185,29 @@
     },
     {
       "userId": 1,
-      "favoriteMovieId": null,
+      "id": 7,
+      "favoriteMovieId": 7,
       "movieId": 310131,
       "rating": 4,
-      "review": "This movie is sick bruh",
-      "poster": "xMuUdeFX5RVlwQ1WTON1cqSSmIR.jpg",
-      "id": 7
+      "poster": "xMuUdeFX5RVlwQ1WTON1cqSSmIR.jpg"
     },
     {
       "userId": 1,
       "favoriteMovieId": null,
-      "movieId": 601,
+      "movieId": 493922,
       "rating": 5,
-      "review": "Elllllliooooooooooot!!!!!!",
-      "poster": "6lJTIPzRV3kAKJAWnOX6Ve318fd.jpg",
+      "review": "I love hereditary",
+      "poster": "lHV8HHlhwNup2VbpiACtlKzaGIQ.jpg",
       "id": 8
+    },
+    {
+      "userId": 1,
+      "favoriteMovieId": null,
+      "movieId": 68,
+      "rating": 4,
+      "review": "Terry Gilliams best",
+      "poster": "d0PibPzCK4fVikjoD1PqHovbvkt.jpg",
+      "id": 9
     }
   ]
 }

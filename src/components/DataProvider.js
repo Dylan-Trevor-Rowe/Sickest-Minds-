@@ -8,6 +8,7 @@ export const DataProvider = (props) => {
     const [dbFavMovies, setDbFavMovie] = useState([])
     const [favoriteMovie, setFavoritedMovie] = useState({})
     const [reviewedMovies, setReviewedMovies] = useState([])
+    const [reviewsById, setReviewById] = useState({})
 
     const fetchMoviesJSON = async (title) => {
         try {
@@ -81,7 +82,18 @@ export const DataProvider = (props) => {
             console.error(error)
         }
     };
-
+    const getReviewById = async (id) => {
+        try {
+            const response = await fetch(`http://localhost:8080/review/${id}`);
+            const reviewById = await response.json()
+            console.log(reviewById)
+            setReviewById(reviewById)
+            return reviewById
+        } catch (error) {
+            console.error(error)
+        }
+    };
+    
     const releaseFavoriteMovie = (id) => {
         return fetch(`http://localhost:8080/favoriteMovies/${id}`, {
             method: 'DELETE',
@@ -109,7 +121,8 @@ export const DataProvider = (props) => {
         <DataContext.Provider value={{
             movie, fetchMoviesJSON, fetchNewMoviesById, favoriteMovie,
             favoriteMoviePost, dbFavMovies, getFavoriteMovies, releaseFavoriteMovie,
-            reviewedMovies, getReviewedMovies, reviewedMoviePost, releaseReview, updateReview
+            reviewedMovies, getReviewedMovies, reviewedMoviePost, releaseReview, updateReview,
+            getReviewById, reviewsById
         }} >
             {props.children}
         </DataContext.Provider>
