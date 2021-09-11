@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { Container, Button } from 'react-bootstrap'
+import { Container, Button, Form } from 'react-bootstrap'
 import { Link, useHistory } from 'react-router-dom'
 import './login.css'
 
@@ -23,7 +23,7 @@ export const Login = (props) => {
         existingUserCheck().then((exists) => {
             if (exists && exists.password === password.current.value) {
                 localStorage.setItem('local_user', exists.id)
-                history.push('/')
+                history.push('/home')
             } else if (exists && exists.password !== password.current.value) {
                 passwordDialog.current.showModal()
             } else if (!exists) {
@@ -50,9 +50,9 @@ export const Login = (props) => {
                 </Button>
             </dialog>
             <section>
-                <form className="form--login" onSubmit={handleLogin}>
+                <Form className="form--login" onSubmit={handleLogin}>
                     <fieldset>
-                        <label htmlFor="inputEmail"> Email address </label>
+                        <label className="emailLabel" htmlFor="inputEmail">Email address </label>
                         <input
                             ref={email}
                             type="email"
@@ -65,13 +65,13 @@ export const Login = (props) => {
                         />
                     </fieldset>
                     <fieldset>
-                        <label htmlFor="inputPassword"> Password </label>
+                        <label className="emailLabel" htmlFor="inputPassword"> Password </label>
                         <input ref={password} type="password" id="password" defaultValue="" className="form-control" placeholder="Password" required />
                     </fieldset>
-                    <fieldset>
-                        <Button id="btn-login" type="submit">Sign in</Button>
+                    <fieldset className="d-flex justify-content-center">
+                        <Button  id="btn-login" type="submit">Sign in</Button>
                     </fieldset>
-                </form>
+                </Form>
             </section>
             <section className="link--register">
                 <Link className="text-white" to="/register">Not a member yet?</Link>

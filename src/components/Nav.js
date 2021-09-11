@@ -16,7 +16,7 @@ export const NavBar = () => {
       <Navbar className="navBar" bg='white' variant='light' expand="lg">
         <Container className='navContainer'>
           <Image src={sickestMinds}></Image>
-          <Nav.Link className="searchLink" href='/'>
+          <Nav.Link className="searchLink" href='/home'>
             <h4>Home</h4>
           </Nav.Link>
           <Nav.Link className="searchLink" href='/searchedmovies'>

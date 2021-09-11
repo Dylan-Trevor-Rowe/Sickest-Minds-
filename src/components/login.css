@@ -62,3 +62,6 @@ fieldset {
     justify-content: center;
     padding-top: 1rem;
 }
+.emailLabel{
+    color: white;
+}

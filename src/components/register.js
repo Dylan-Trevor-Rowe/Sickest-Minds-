@@ -38,7 +38,7 @@ export const Register = (props) => {
             .then(createdUser => {
               if (createdUser.hasOwnProperty("id")) {
                 localStorage.setItem("local_user", createdUser.id)
-                props.history.push("/")
+                props.history.push("/home")
               }
             })
         })
@@ -59,7 +59,7 @@ export const Register = (props) => {
       <form className="form--login" onSubmit={handleRegister}>
         <img className="registerImage" src={sickestMinds}></img>
         <fieldset>
-          <label htmlFor="firstName"> First Name </label>
+          <label className="emailLabel" htmlFor="firstName"> First Name </label>
           <input ref={firstName} type="text"
             name="firstName"
             className="form-control"
@@ -67,7 +67,7 @@ export const Register = (props) => {
             required autoFocus />
         </fieldset>
         <fieldset>
-          <label htmlFor="lastName"> Last Name </label>
+          <label className="emailLabel" htmlFor="lastName"> Last Name </label>
           <input ref={lastName} type="text"
             name="lastName"
             className="form-control"
@@ -75,7 +75,7 @@ export const Register = (props) => {
             required />
         </fieldset>
         <fieldset>
-          <label htmlFor="inputEmail"> Email address </label>
+          <label className="emailLabel" htmlFor="inputEmail"> Email address </label>
           <input ref={email} type="email"
             name="email"
             className="form-control"
@@ -83,7 +83,7 @@ export const Register = (props) => {
             required />
         </fieldset>
         <fieldset>
-          <label htmlFor="inputPassword"> Password </label>
+          <label className="emailLabel" htmlFor="inputPassword"> Password </label>
           <input ref={password} type="password"
             name="password"
             className="form-control"
@@ -91,7 +91,7 @@ export const Register = (props) => {
             required />
         </fieldset>
         <fieldset>
-          <label htmlFor="verifyPassword"> Verify Password </label>
+          <label className="emailLabel" htmlFor="verifyPassword"> Verify Password </label>
           <input ref={verifyPassword} type="password"
             name="verifyPassword"
             className="form-control"
@@ -99,7 +99,7 @@ export const Register = (props) => {
             required />
         </fieldset>
         <fieldset>
-          <Button variant='danger' type="submit">
+          <Button className="emailLabel" variant='primary' type="submit">
             Sign in
           </Button>
         </fieldset>
