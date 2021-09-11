@@ -24,7 +24,10 @@ Technologies used include: React, React-Router-Dom,  JSON Server( as a mock rest
 ## Installation
 This app was created with create-react-app. Dependencies: npm
 
-Clone the repo by running git clone in the terminal. git clone git@github.com:Dylan-Trevor-Rowe/Sickest-Minds-.git (the full comand to paste)
+Clone the repo by running git clone in the terminal. 
+
+git clone git@github.com:Dylan-Trevor-Rowe/Sickest-Minds-.git (the full command to paste)
+
 Run cd Sickest-Minds- to move into the project repo
 Run npm install to set up the react app
 If you don't already have json-server, run npm install json-server
