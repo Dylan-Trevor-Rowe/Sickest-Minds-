@@ -1,6 +1,6 @@
 # Sickest Minds
 
-Sickest Minds is a Full CRUD, responsive application that I built as a portfolio piece. It is an evergoing ongoing work in progress.
+Sickest Minds is a Full CRUD, responsive application that I built as a portfolio piece. It is an  ongoing work in progress.
 The Application was built with movie nerds (me) in mind. 
 
 # Overview
@@ -21,10 +21,13 @@ https://user-images.githubusercontent.com/59629710/132908900-ff9e3595-8144-4631-
 ## Technologies 
 Technologies used include: React, React-Router-Dom,  JSON Server( as a mock rest api ), and React-Bootstrap
 
-#Installation
+## Installation
 This app was created with create-react-app. Dependencies: npm
 
-Clone the repo by running git clone in the terminal. git clone git@github.com:Dylan-Trevor-Rowe/Sickest-Minds-.git (the full comand to paste)
+Clone the repo by running git clone in the terminal. 
+
+git clone git@github.com:Dylan-Trevor-Rowe/Sickest-Minds-.git (the full command to paste)
+
 Run cd Sickest-Minds- to move into the project repo
 Run npm install to set up the react app
 If you don't already have json-server, run npm install json-server
