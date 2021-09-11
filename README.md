@@ -5,13 +5,9 @@ The Application was built with movie nerds (me) in mind.
 
 # Overview
 
-A user can log in to the application and begin by searching for a movie. I used The Move Database api for asynchronous search functionionality. 
-A user can search for any film they please. A user has the ability to see the information of eached movie that pops up in the search (overview, release date, etc ).
-A user can then favorite a movie. All of the users favorited movies will render into the favorites component ( favorites view ).
-The user can check out additional info about a movie once it is favorited. There is an option on each card to view info. 
-A user can delete their favorites at will. Once a movie has been favorited, the user can then write a review for the movie. 
-After the user has written a review it can be viewed in the reviewed movies page or the sites homepage. 
-The user can then update, or delete each individual movie at their will. 
+A user has the ability to search and view info for any movie via the Movie DataBase Api. They can favorite movies of their choosing and
+build a collection of their own. They can view all the info for each favorited movie. The user also has the ability to write reviews for any favorite movie. 
+Favorites and reviews are of course Full CRUD. 
 
 
 ![Sickest Minds](https://github.com/Dylan-Trevor-Rowe/Sickest-Minds-/blob/main/src/components/sickestMindsScreenshot.jpg)
