@@ -21,7 +21,7 @@ https://user-images.githubusercontent.com/59629710/132908900-ff9e3595-8144-4631-
 ## Technologies 
 Technologies used include: React, React-Router-Dom,  JSON Server( as a mock rest api ), and React-Bootstrap
 
-#Installation
+## Installation
 This app was created with create-react-app. Dependencies: npm
 
 Clone the repo by running git clone in the terminal. git clone git@github.com:Dylan-Trevor-Rowe/Sickest-Minds-.git (the full comand to paste)
