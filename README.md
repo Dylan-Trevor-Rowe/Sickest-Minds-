@@ -12,7 +12,7 @@ Favorites and reviews are of course Full CRUD.
 
 ![Sickest Minds](https://github.com/Dylan-Trevor-Rowe/Sickest-Minds-/blob/main/src/components/sickestMindsScreenshot.jpg)
 
-#Demo
+## Demo
 
 https://user-images.githubusercontent.com/59629710/132908900-ff9e3595-8144-4631-8c73-677a2a936164.mp4
 
