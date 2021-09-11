@@ -24,7 +24,7 @@ Technologies used include: React, React-Router-Dom,  JSON Server( as a mock rest
 #Installation
 This app was created with create-react-app. Dependencies: npm
 
-Clone the repo by running git clone in the terminal
+Clone the repo by running git clone in the terminal. git clone git@github.com:Dylan-Trevor-Rowe/Sickest-Minds-.git (the full comand to paste)
 Run cd Sickest-Minds- to move into the project repo
 Run npm install to set up the react app
 If you don't already have json-server, run npm install json-server
@@ -33,7 +33,5 @@ In this window, run json-server -p 8080 db.json to start the database
 In In the previous terminal window, run npm start to start the react app
 A browser window will open. You can register a user, and search for movies. 
 
-
-If server is running open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
