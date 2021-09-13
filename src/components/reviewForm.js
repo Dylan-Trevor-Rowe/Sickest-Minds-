@@ -6,7 +6,6 @@ import Rating from '@material-ui/lab/Rating';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
-
 export const MovieReviewForm = (props) => {
 
   const { id, movieId, path } = props.match.params
@@ -40,10 +39,9 @@ export const MovieReviewForm = (props) => {
     setDefaultReviewState(newReviewState)
   }
 
-console.log(defaultReviewState.defaultReviewState)
   const onClickReview = () => {
 
-    if (id) {
+    if(id) {
       if (defaultReviewState.defaultReviewState === undefined) {
         updateReview({
           userId: Number(localStorage.getItem('local_user')),
@@ -69,7 +67,6 @@ console.log(defaultReviewState.defaultReviewState)
         history.push('/home')
       }
     } else {
-
       reviewedMoviePost({
         userId: Number(localStorage.getItem('local_user')),
         favoriteMovieId: parseInt(id),
@@ -85,7 +82,7 @@ console.log(defaultReviewState.defaultReviewState)
     }
   }
 
-  if (id) {
+  if(id) {
     return (
       <>
         <Form className=" text-center reviewForm">
@@ -100,7 +97,7 @@ console.log(defaultReviewState.defaultReviewState)
                 name="rating"
                 value={defaultState}
                 onChange={(event, newValue) => {
-                  setDefaultState(newValue);
+                setDefaultState(newValue);
                 }}
               />
             </Box>

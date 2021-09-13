@@ -1,11 +1,10 @@
 import React, { useRef } from 'react'
 import { Container, Button, Form } from 'react-bootstrap'
 import { Link, useHistory } from 'react-router-dom'
-
 import './login.css'
 
 export const Login = (props) => {
-    
+
     const email = useRef()
     const password = useRef()
     const existDialog = useRef()
@@ -70,7 +69,7 @@ export const Login = (props) => {
                         <input ref={password} type="password" id="password" defaultValue="" className="form-control" placeholder="Password" required />
                     </fieldset>
                     <fieldset className="d-flex justify-content-center">
-                        <Button  id="btn-login" type="submit">Sign in</Button>
+                        <Button id="btn-login" type="submit">Sign in</Button>
                     </fieldset>
                 </Form>
             </section>
