@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./components/homepage.css";
 import './components/login.css'
-import { Route, BrowserRouter } from "react-router-dom";
+import { Route, BrowserRouter, Switch } from "react-router-dom";
 import { MovieCard } from "./components/card";
 import { MovieReview } from "./components/moviedetails";
 import { Container } from "react-bootstrap";
@@ -13,24 +13,25 @@ import { FavoriteMoviesCards } from './components/favorites';
 import { FavoritedMovieInfo } from './components/favoritedMovieInfo'
 import { MovieReviewForm } from './components/reviewForm'
 
-
 export const App = (props) => {
   return (
     <>
       <BrowserRouter>
         <DataProvider>
           <Container className='card-Class'>
-            <Route
-              exact
-              path='/home'
-              render={(matchProps) => {
-                return (
-                  <>
-                    <HomePage />
-                    <MovieCard
-                      {...matchProps} />
-                  </>);
-              }} />
+            <Switch>
+              <Route
+                exact
+                path='/home'
+                render={(matchProps) => {
+                  return (
+                    <>
+                      <HomePage />
+                      <MovieCard
+                        {...matchProps} />
+                    </>);
+                }} />
+            </Switch>
           </Container>
           <Route
             exact

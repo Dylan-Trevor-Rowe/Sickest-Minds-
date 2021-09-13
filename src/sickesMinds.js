@@ -1,5 +1,5 @@
 import React from "react"
-import { Route, Redirect } from "react-router-dom"
+import { Route, Redirect, Switch } from "react-router-dom"
 import { App } from "./App"
 import { NavBar } from "./components/Nav"
 import { Login } from "./components/login"
@@ -8,41 +8,20 @@ import { DataProvider } from "./components/DataProvider"
 
 export const SickestMinds = () => (
     <>
-        <DataProvider>
-            <Route render={(props) => {
-                if (localStorage.getItem("local_user")) {
-                    return <>
+        <Route render={(props) => {
+            if (localStorage.getItem("local_user")) {
+                return <>
+                    <DataProvider>
                         <NavBar {...props} />
                         <App />
-                    </>
-                } else {
-                    return <Redirect to="/login" />
-                }
-            }} />
-
-            <Route path="/login" render={() => {
-                if (localStorage.getItem("local_user")) {
-                    return <Redirect to="/home" />
-                } else {
-                    return <Login />
-                }
-            }} />
-
-            <Route path="/register" render={(props) => {
-                if (localStorage.getItem("local_user")) {
-                    return <Redirect to="/home" />
-                } else {
-                    return <Register {...props} />
-                }
-            }} />
-            <Route
-                path="/logout"
-                render={() => {
-                    localStorage.removeItem("local_user");
-                    <Redirect to="/login" />;
-                    return <Login />
-                }}
-            />
-        </DataProvider>
+                    </DataProvider>
+                </>
+            } else {
+                return <Redirect to="/login" />
+            }
+        }} />
+        
+        <Route path="/login" render={(props) => <Login {...props} />} />
+        <Route path="/register" render={(props) => <Register {...props} />} />
     </>
 )

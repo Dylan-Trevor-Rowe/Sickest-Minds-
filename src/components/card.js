@@ -28,7 +28,7 @@ export const MovieCard = () => {
     const editReview = () => history.push(`/movieCards/${i.id}/${i.movieId}/${path}/editreview`)
 
     return <>
-      <div key={index}>
+      <div key={i.id}>
         <Card style={{ width: "18rem", minHeight: "32rem", maxHeight: "32rem", marginTop: "1rem" }}>
           <Card.Img height='400rem' variant='top' src={"https://image.tmdb.org/t/p/w500/" + '/'+path} />
           <Card.Body className="d-flex row justify-content-center">

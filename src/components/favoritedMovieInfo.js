@@ -18,7 +18,6 @@ export const FavoritedMovieInfo = (props) => {
             } catch (error) {
                 console.error(error)
             }
-
             try {
                 const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${movieApikey}`);
                 const movieCredits = await response.json();
@@ -34,17 +33,17 @@ export const FavoritedMovieInfo = (props) => {
 
     return <>
 
-        <Container className="text-center">
+        <Container className="text-center m-3">
             <Col className='filteredImageContainer'>
                 <Image className='filteredImage' fluid src={"https://image.tmdb.org/t/p/w500/" + path} />
             </Col>
             <h1 className='reviewText'>{favoriteMovieInfo.title}</h1>
-            <h4 className='reviewText'>{favoriteMovieInfo.tagline}</h4>
-            <h4 className='reviewText'> Release Date: {favoriteMovieInfo.release_date}</h4>
-            <p className='reviewText'>{favoriteMovieInfo.overview}</p>
+            <h5 className='reviewText'>{favoriteMovieInfo.tagline}</h5>
+            <h5 className='reviewText'> Release Date: {favoriteMovieInfo.release_date}</h5>
+            <h5 className='reviewText'>{favoriteMovieInfo.overview}</h5>
         </Container>
         <Container className="d-flex flex-wrap fluid justify-content-center">
-            <h3 className="castH3 text-center">Starring:</h3>
+            <h5 className="castH3 text-center m-1">Starring:</h5>
             {movieCredits.map((i) => {
                 return (
                     <div key={i.id}>

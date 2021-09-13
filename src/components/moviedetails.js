@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Image, Col } from "react-bootstrap";
 import { useContext, useEffect } from "react";
 import { DataContext } from "./DataProvider";
-import { RatingView } from 'react-simple-star-rating'
+import Rating from '@material-ui/lab/Rating';
 
 export const MovieReview = (props) => {
   
@@ -24,7 +24,7 @@ export const MovieReview = (props) => {
         <Image className='filteredImage' fluid src={"https://image.tmdb.org/t/p/w500/" + path} />
       </Col>
       <Col className="d-flex justify-content-center">
-        <RatingView ratingValue={reviews.rating} />
+      <Rating name="read-only" value={reviews.rating} readOnly />
       </Col>
       <p className='reviewText text-center'>{reviews.review}</p>
     </Container>

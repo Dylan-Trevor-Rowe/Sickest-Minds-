@@ -14,7 +14,12 @@ export const DataProvider = (props) => {
         try {
             const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${movieApikey}&query=${title} +`);
             const movies = await response.json()
-            setMovie(movies.results)
+            if (movies.results.length === 0) {
+                window.alert('no matching movie')
+            } else {
+                setMovie(movies.results)
+            }
+
         } catch (error) {
             console.error(error)
         }
@@ -86,14 +91,13 @@ export const DataProvider = (props) => {
         try {
             const response = await fetch(`http://localhost:8080/review/${id}`);
             const reviewById = await response.json()
-            console.log(reviewById)
             setReviewById(reviewById)
             return reviewById
         } catch (error) {
             console.error(error)
         }
     };
-    
+
     const releaseFavoriteMovie = (id) => {
         return fetch(`http://localhost:8080/favoriteMovies/${id}`, {
             method: 'DELETE',

@@ -27,13 +27,6 @@
   ],
   "favoriteMovies": [
     {
-      "userId": 1,
-      "movieId": 694,
-      "title": "The Shining",
-      "posterPath": "/b6ko0IKC8MdYBBPkkA1aBPLe2yz.jpg",
-      "id": 3
-    },
-    {
       "userId": 2,
       "movieId": 535544,
       "title": "Downton Abbey",
@@ -48,106 +41,91 @@
       "id": 6
     },
     {
+      "userId": 2,
+      "movieId": 11036,
+      "title": "The Notebook",
+      "posterPath": "/rNzQyW4f8B8cQeg7Dgj3n6eT5k9.jpg",
+      "id": 21
+    },
+    {
+      "userId": 2,
+      "movieId": 5683,
+      "title": "Pee-wee's Big Adventure",
+      "posterPath": "/414IUXc54mrhX88ZUQiRDLXn01i.jpg",
+      "id": 22
+    },
+    {
       "userId": 1,
       "movieId": 493922,
       "title": "Hereditary",
       "posterPath": "/lHV8HHlhwNup2VbpiACtlKzaGIQ.jpg",
-      "id": 7
+      "id": 23
     },
     {
       "userId": 1,
-      "movieId": 310131,
-      "title": "The Witch",
-      "posterPath": "/xMuUdeFX5RVlwQ1WTON1cqSSmIR.jpg",
-      "id": 8
+      "movieId": 694,
+      "title": "The Shining",
+      "posterPath": "/b6ko0IKC8MdYBBPkkA1aBPLe2yz.jpg",
+      "id": 24
     },
     {
       "userId": 1,
-      "movieId": 68,
-      "title": "Brazil",
-      "posterPath": "/d0PibPzCK4fVikjoD1PqHovbvkt.jpg",
-      "id": 9
-    },
-    {
-      "userId": 1,
-      "movieId": 87,
-      "title": "Indiana Jones and the Temple of Doom",
-      "posterPath": "/5VPmZF77ZjTMqIUQlXZWmdMsGIN.jpg",
-      "id": 10
-    },
-    {
-      "userId": 1,
-      "movieId": 7345,
-      "title": "There Will Be Blood",
-      "posterPath": "/fa0RDkAlCec0STeMNAhPaF89q6U.jpg",
-      "id": 11
-    },
-    {
-      "userId": 1,
-      "movieId": 238,
-      "title": "The Godfather",
-      "posterPath": "/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
-      "id": 12
+      "movieId": 68718,
+      "title": "Django Unchained",
+      "posterPath": "/7oWY8VDWW7thTzWh3OKYRkWUlD5.jpg",
+      "id": 25
     },
     {
       "userId": 1,
       "movieId": 769,
       "title": "GoodFellas",
       "posterPath": "/6QMSLvU5ziIL2T6VrkaKzN2YkxK.jpg",
-      "id": 13
+      "id": 26
+    },
+    {
+      "userId": 1,
+      "movieId": 335984,
+      "title": "Blade Runner 2049",
+      "posterPath": "/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg",
+      "id": 27
+    },
+    {
+      "userId": 1,
+      "movieId": 12405,
+      "title": "Slumdog Millionaire",
+      "posterPath": "/5leCCi7ZF0CawAfM5Qo2ECKPprc.jpg",
+      "id": 28
     },
     {
       "userId": 1,
       "movieId": 786,
       "title": "Almost Famous",
       "posterPath": "/3rrkyLYbgLj84AYvjhdcJot4JPx.jpg",
-      "id": 14
+      "id": 29
     },
     {
       "userId": 1,
-      "movieId": 244786,
-      "title": "Whiplash",
-      "posterPath": "/oPxnRhyAIzJKGUEdSiwTJQBa3NM.jpg",
-      "id": 15
+      "movieId": 238,
+      "title": "The Godfather",
+      "posterPath": "/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+      "id": 30
     },
     {
       "userId": 1,
-      "movieId": 28,
-      "title": "Apocalypse Now",
-      "posterPath": "/gQB8Y5RCMkv2zwzFHbUJX3kAhvA.jpg",
-      "id": 16
+      "movieId": 7345,
+      "title": "There Will Be Blood",
+      "posterPath": "/fa0RDkAlCec0STeMNAhPaF89q6U.jpg",
+      "id": 31
     },
     {
       "userId": 1,
-      "movieId": 489,
-      "title": "Good Will Hunting",
-      "posterPath": "/bABCBKYBK7A5G1x0FzoeoNfuj2.jpg",
-      "id": 17
-    },
-    {
-      "userId": 1,
-      "movieId": 294963,
-      "title": "Bone Tomahawk",
-      "posterPath": "/hUPp0bZkspXGifzkeYqPpRLugn9.jpg",
-      "id": 18
-    },
-    {
-      "userId": 1,
-      "movieId": 764,
-      "title": "The Evil Dead",
-      "posterPath": "/uYxQ6xhP3WjqPZtxyAOnZQWnZqn.jpg",
-      "id": 20
+      "movieId": 503919,
+      "title": "The Lighthouse",
+      "posterPath": "/3nk9UoepYmv1G9oP18q6JJCeYwN.jpg",
+      "id": 32
     }
   ],
   "review": [
-    {
-      "userId": 1,
-      "id": 3,
-      "favoriteMovieId": 3,
-      "movieId": 694,
-      "rating": 3,
-      "poster": "b6ko0IKC8MdYBBPkkA1aBPLe2yz.jpg"
-    },
     {
       "userId": 2,
       "favoriteMovieId": null,
@@ -162,34 +140,34 @@
       "id": 6,
       "favoriteMovieId": 6,
       "movieId": 597,
-      "rating": 3,
-      "review": "Poop!",
+      "rating": 4,
       "poster": "9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg"
     },
     {
-      "userId": 1,
-      "id": 7,
-      "favoriteMovieId": 7,
-      "movieId": 310131,
-      "rating": 3,
-      "review": "The witch is my favorite. Black Phillip rocks. So does Anya Taylor Joy! Poop!",
-      "poster": "xMuUdeFX5RVlwQ1WTON1cqSSmIR.jpg"
+      "userId": 2,
+      "id": 12,
+      "favoriteMovieId": 12,
+      "movieId": 11036,
+      "rating": 2,
+      "poster": "rNzQyW4f8B8cQeg7Dgj3n6eT5k9.jpg"
     },
     {
-      "userId": 1,
-      "id": 8,
-      "favoriteMovieId": 8,
-      "movieId": 493922,
+      "userId": 2,
+      "id": 13,
+      "favoriteMovieId": 13,
+      "movieId": 5683,
       "rating": 4,
-      "review": "4",
-      "poster": "lHV8HHlhwNup2VbpiACtlKzaGIQ.jpg"
+      "review": "ewewewew",
+      "poster": "414IUXc54mrhX88ZUQiRDLXn01i.jpg"
     },
     {
       "userId": 1,
-      "id": 9,
-      "favoriteMovieId": 9,
-      "movieId": 68,
-      "poster": "d0PibPzCK4fVikjoD1PqHovbvkt.jpg"
+      "id": 14,
+      "favoriteMovieId": 14,
+      "movieId": 503919,
+      "rating": 5,
+      "review": "This is a really happy movie. I love happy movies. I am kidding. This movie is so dark. SOOOOOOOOO DARRRRRRK",
+      "poster": "3nk9UoepYmv1G9oP18q6JJCeYwN.jpg"
     }
   ]
 }
