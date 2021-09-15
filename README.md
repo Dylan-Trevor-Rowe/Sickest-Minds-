@@ -19,7 +19,7 @@ https://user-images.githubusercontent.com/59629710/132908900-ff9e3595-8144-4631-
 
 
 ## Technologies 
-Technologies used include: React, React-Router-Dom,  JSON Server( as a mock rest api ), and React-Bootstrap
+Technologies used include: React, React-Router-Dom, CSS, JSON Server( as a mock rest api ), and React-Bootstrap
 
 ## Installation
 This app was created with create-react-app. Dependencies: npm
