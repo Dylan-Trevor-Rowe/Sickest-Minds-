@@ -1,8 +1,8 @@
 import React, { useContext, useEffect } from "react";
 import { Card, Button, Badge } from "react-bootstrap";
-import { DataContext } from "./DataProvider";
+import { DataContext } from "../data/DataProvider";
 import { useHistory } from "react-router-dom";
-import './homepage.css'
+import '../homepage.css'
 
 export const FavoriteMoviesCards = () => {
 

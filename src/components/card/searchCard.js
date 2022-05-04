@@ -1,8 +1,8 @@
 import React, { useContext, useEffect } from 'react'
 import { Card, Button } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
-import { DataContext } from "./DataProvider";
-import './homepage.css'
+import { DataContext } from "../data/DataProvider";
+import '../homepage.css'
 
 export const SearchCards = (props) => {
 

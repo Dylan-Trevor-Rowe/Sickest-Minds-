@@ -1,11 +1,52 @@
 {
   "users": [
-  
+    {
+      "email": "dylanthk@gmail.com",
+      "password": "d",
+      "name": "Dylan Rowe",
+      "id": 1
+    },
+    {
+      "email": "m@m.com",
+      "password": "m",
+      "name": "m m",
+      "id": 2
+    }
   ],
   "favoriteMovies": [
- 
+    {
+      "userId": 1,
+      "movieId": 493922,
+      "title": "Hereditary",
+      "posterPath": "/lHV8HHlhwNup2VbpiACtlKzaGIQ.jpg",
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "movieId": 497,
+      "title": "The Green Mile",
+      "posterPath": "/velWPhVMQeQKcxggNEU8YmIo52R.jpg",
+      "id": 2
+    }
   ],
   "review": [
-
+    {
+      "userId": 1,
+      "favoriteMovieId": null,
+      "movieId": 493922,
+      "rating": 5,
+      "review": "I love this movie",
+      "poster": "lHV8HHlhwNup2VbpiACtlKzaGIQ.jpg",
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "favoriteMovieId": null,
+      "movieId": 497,
+      "rating": 4,
+      "review": "Sad story but I love it",
+      "poster": "velWPhVMQeQKcxggNEU8YmIo52R.jpg",
+      "id": 2
+    }
   ]
 }

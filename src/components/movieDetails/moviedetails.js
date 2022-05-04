@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Image, Col } from "react-bootstrap";
 import { useContext, useEffect } from "react";
-import { DataContext } from "./DataProvider";
+import { DataContext } from "../data/DataProvider";
 import Rating from '@material-ui/lab/Rating';
 
 export const MovieReview = (props) => {

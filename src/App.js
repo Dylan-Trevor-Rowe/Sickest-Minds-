@@ -1,17 +1,17 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./components/homepage.css";
-import './components/login.css'
+import './components/auth/login.css'
 import { Route, BrowserRouter, Switch } from "react-router-dom";
-import { MovieCard } from "./components/card";
-import { MovieReview } from "./components/moviedetails";
+import { MovieCard } from "./components/card/card";
+import { MovieReview } from "./components/movieDetails/moviedetails";
 import { Container } from "react-bootstrap";
 import { HomePage } from "./components/homepage";
 import { FetchAndSearchMovies } from './components/FetchAndSearchMovies'
-import { SearchedMovieInfo } from './components/movieInfo'
-import { DataProvider } from "./components/DataProvider";
-import { FavoriteMoviesCards } from './components/favorites';
-import { FavoritedMovieInfo } from './components/favoritedMovieInfo'
-import { MovieReviewForm } from './components/reviewForm'
+import { SearchedMovieInfo } from './components/movieDetails/movieInfo'
+import { DataProvider } from "./components/data/DataProvider";
+import { FavoriteMoviesCards } from './components/favorites/favorites';
+import { FavoritedMovieInfo } from './components/favorites/favoritedMovieInfo'
+import { MovieReviewForm } from './components/reviews/reviewForm'
 
 export const App = (props) => {
   return (

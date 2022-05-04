@@ -1,10 +1,10 @@
 import React from "react"
 import { Route, Redirect, Switch } from "react-router-dom"
 import { App } from "./App"
-import { NavBar } from "./components/Nav"
-import { Login } from "./components/login"
-import { Register } from "./components/register"
-import { DataProvider } from "./components/DataProvider"
+import { NavBar } from "./components/nav/Nav"
+import { Login } from "./components/auth/login"
+import { Register } from "./components/auth/register"
+import { DataProvider } from "./components/data/DataProvider"
 
 export const SickestMinds = () => (
     <>

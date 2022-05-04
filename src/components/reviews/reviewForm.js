@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react'
 import { Form, Button } from "react-bootstrap";
 import { useHistory } from 'react-router';
-import { DataContext } from './DataProvider';
+import { DataContext } from '../data/DataProvider';
 import Rating from '@material-ui/lab/Rating';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';

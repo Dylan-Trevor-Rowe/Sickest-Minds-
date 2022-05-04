@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { Container, Image, Col, ListGroup } from "react-bootstrap";
-import './homepage.css'
+import '../homepage.css'
 
 export const FavoritedMovieInfo = (props) => {
     const [favoriteMovieInfo, setFavoritedMovieInfo] = useState({})

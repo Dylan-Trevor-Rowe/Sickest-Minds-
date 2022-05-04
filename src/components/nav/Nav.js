@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { Navbar, Nav, Container, Image } from "react-bootstrap";
-import { DataContext } from "./DataProvider";
-import sickestMinds from "./sickestMinds.jpg";
-import "./homepage.css";
+import { DataContext } from "../data/DataProvider";
+import sickestMinds from "../sickestMinds.jpg";
+import "../homepage.css";
 
 export const NavBar = () => {
   const { getMovieIdList } = useContext(DataContext)

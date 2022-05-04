@@ -1,7 +1,7 @@
 import React, { useRef } from "react"
 import { Button } from 'react-bootstrap'
 import "./login.css"
-import sickestMinds from "./sickestMinds.jpg";
+import sickestMinds from "../sickestMinds.jpg";
 
 export const Register = (props) => {
   const firstName = useRef()

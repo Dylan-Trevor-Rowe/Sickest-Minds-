@@ -1,7 +1,7 @@
 import React, { useRef, useContext } from "react";
 import { Form, Button } from 'react-bootstrap'
-import { SearchCards } from "./searchCard";
-import { DataContext } from "./DataProvider";
+import { SearchCards } from "./card/searchCard";
+import { DataContext } from "./data/DataProvider";
 
 export const FetchAndSearchMovies = () => {
 
