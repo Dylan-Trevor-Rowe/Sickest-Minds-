@@ -2,7 +2,6 @@ import React, { useState, createContext } from "react"
 export const DataContext = createContext()
 
 export const DataProvider = (props) => {
-
     const movieApikey = process.env.REACT_APP_MOVIE_API_KEY;
     const [movie, setMovie] = useState([])
     const [dbFavMovies, setDbFavMovie] = useState([])

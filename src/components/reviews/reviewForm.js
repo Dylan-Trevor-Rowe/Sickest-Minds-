@@ -21,7 +21,7 @@ export const MovieReviewForm = (props) => {
     if (id) {
       getReviewById(parseInt(id)).then((res) => {
         setLocalState(res)
-        setDefaultState(res.rating)
+        setDefaultState(res.rating) 
         setDefaultReviewState(res)
       })
     }

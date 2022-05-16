@@ -17,7 +17,9 @@ export const MovieCard = () => {
     releaseReview(e.target.value)
   }
 
-  return <> {reviewedMovies.map((i, index) => {
+  const filteredUsers = reviewedMovies.filter(movies => movies.userId === Number(localStorage.getItem('local_user')))
+
+  return <> {filteredUsers.map((i) => {
 
     const path = i.poster
 

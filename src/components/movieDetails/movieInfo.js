@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { Container, Image, Col } from "react-bootstrap";
 
 export const SearchedMovieInfo = (props) => {
-
   const [movie, setMovie] = useState({})
 
   useEffect(() => {
@@ -13,7 +12,6 @@ export const SearchedMovieInfo = (props) => {
       try {
         const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${movieApikey}`);
         const movie = await response.json();
-        console.log(movie)
         setMovie(movie)
       } catch (error) {
         console.error(error)
