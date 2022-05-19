@@ -33,7 +33,7 @@ export const FavoritedMovieInfo = (props) => {
 
     return <>
 
-        <Container className="text-center m-3">
+        <Container className="text-center">
             <Col className='filteredImageContainer'>
                 <Image className='filteredImage' fluid src={"https://image.tmdb.org/t/p/w500/" + path} />
             </Col>
@@ -48,11 +48,12 @@ export const FavoritedMovieInfo = (props) => {
                 return (
                     <div key={i.id}>
                         <ListGroup>
-                            <p className="castList">{i.name},</p>
+                            {movieCredits.indexOf(i) < movieCredits.length - 1 ? <p className="castList">{i.name},</p> 
+                            : <p className="castList">{i.name}</p>}
                         </ListGroup>
                     </div>
                 );
             })}
         </Container>
     </>
-}
+}   
